@@ -1,6 +1,6 @@
-const CustomImage=()=>{
+const CustomImage=(props)=>{
     return (
-        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="product" height={100} width={75}/>
+        <img src={props.src} alt={props.alt} height={props.height} width={props.width}/>
     );
 }
 
