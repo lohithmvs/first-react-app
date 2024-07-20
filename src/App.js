@@ -1,5 +1,10 @@
 import './App.css';
 
-const App=()=> <h1>Hello FIL world
-</h1>
+const App=()=>{
+    return(
+        <div>
+        <h1>Hello world</h1>
+    </div>
+    );
+};
 export default App;
