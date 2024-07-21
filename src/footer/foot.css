@@ -1,0 +1,20 @@
+/* .Fot{
+    width: 100%;
+    position: sticky;
+    top:10px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+} */
+.Fot {
+    width: 100%;
+    position: sticky;
+    bottom: 0; /* Position it at the bottom */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+    background-color: red;
+     /* Ensure it sits above other content */
+}

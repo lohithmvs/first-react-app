@@ -8,26 +8,35 @@ import Table from './Table/Table';
 import Cards from './Card/Cards';
 import { IplData } from './ipldata/IplData';
 import CustomImage from './imagess/CustomImage';
-
+import IplCards from './ipldata/IplCards';
+import "./ipldata/iplcard.css";
+import "./Header/header.css";
+import Header from './Header/header';
+import Foot1 from "./footer/footer";
+import "./footer/foot.css"
+const jio1=["home","address","teams","drops"];
 const App=()=>{
     return (
-        <div>
-            {
-                IplData.map(val=>(
-                    <div>
-                        <h2>{val.name}</h2>
-                        <CustomImage src={val.src} alt="hlo" height={100} width={100}/>
-                        {
-                            val.players.map(val1=>(
-                                <h4>{val1}</h4>
-                            ))
-                        }
-                        <h3>Trophies:{val.Trophies}</h3>
-                    </div>
-                ))
-            }
+        <>
+        <div className="head">
+        {
+            jio1.map((val2)=>(
+                <Header data1={val2} />
+            ))
+        }
+        </div>
+        <div className="card">
+        {
+            IplData.map(val=>(
+                <IplCards src={val.src} name={val.name} arr={val.players} cups={val.Trophies}/>
+            ))
+        }
+        </div>
+        <div className="Fot">
+            <Foot1/>
         </div>
         
+        </>
     );
     
 };
