@@ -13,30 +13,13 @@ import "./ipldata/iplcard.css";
 import "./Header/header.css";
 import Header from './Header/header';
 import Foot1 from "./footer/footer";
-import "./footer/foot.css"
-const jio1=["home","address","teams","drops"];
+import "./footer/foot.css";
+import CustomList from './List/CustomList';
+
+const data1=["apple","pineapple","orange"]
 const App=()=>{
     return (
-        <>
-        <div className="head">
-        {
-            jio1.map((val2)=>(
-                <Header data1={val2} />
-            ))
-        }
-        </div>
-        <div className="card">
-        {
-            IplData.map(val=>(
-                <IplCards src={val.src} name={val.name} arr={val.players} cups={val.Trophies}/>
-            ))
-        }
-        </div>
-        <div className="Fot">
-            <Foot1/>
-        </div>
-        
-        </>
+        <CustomList arr={data1}/>
     );
     
 };
