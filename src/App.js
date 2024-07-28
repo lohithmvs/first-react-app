@@ -11,17 +11,13 @@ import TodoClass from './Class-Component/Class-todo';
 import CounterClass from './Class-Component/Class-counter';
 import IplClass from './Class-Component/Class-Ipl';
 import SquareClass from './Class-Component/Class-Square';
+import IplCounter from './Class-Component/Class-IplSep';
+import FetchProducts from './Fetch-data/FetchProducts';
 const App=()=>{
     return (
         <div>
-            <SubscribeButton/>
-            <TodoClass/>
-            <div style={{marginTop:"20px"}}>
-            <CounterClass/>
-            </div>
-            <IplClass/>
-            <SquareClass/>
-            
+            <IplCounter/>
+            <FetchProducts/>
         </div>
         
     );
