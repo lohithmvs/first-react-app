@@ -15,12 +15,13 @@ import IplCounter from './Class-Component/Class-IplSep';
 import FetchProducts from './Fetch-data/FetchProducts';
 import FetchAwait from './Fetch-data/FetchAwait';
 import FetchAxios from './Fetch-data/Fetch-Axios';
+import MountingClass from './LifeCycles/Mounting';
+import UpdateStage from './LifeCycles/UpdateStage';
+import UnmountingStage from './LifeCycles/UnMounting';
 const App=()=>{
     return (
         <div>
-            <FetchAwait/>
-            <h2>Country offical Names</h2>
-            <FetchAxios/>
+            <UnmountingStage/>
         </div>
         
     );
