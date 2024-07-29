@@ -18,10 +18,12 @@ import FetchAxios from './Fetch-data/Fetch-Axios';
 import MountingClass from './LifeCycles/Mounting';
 import UpdateStage from './LifeCycles/UpdateStage';
 import UnmountingStage from './LifeCycles/UnMounting';
+import SearchPro from './Search/Search-Poduct';
+import SearchIpl from './Search/Search-IplCards';
 const App=()=>{
     return (
         <div>
-            <UnmountingStage/>
+            <SearchIpl/>
         </div>
         
     );
