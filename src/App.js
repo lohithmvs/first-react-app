@@ -20,10 +20,15 @@ import UpdateStage from './LifeCycles/UpdateStage';
 import UnmountingStage from './LifeCycles/UnMounting';
 import SearchPro from './Search/Search-Poduct';
 import SearchIpl from './Search/Search-IplCards';
+import UseStateEx1 from './Hooks/useState/UseStateEx1';
+import UseStateEx2 from './Hooks/useState/UseStateEx2';
+import RecipeUseState from './Hooks/useState/RecipeUseState';
+import UseStateSquare from './Hooks/useState/AddSquareUseState';
 const App=()=>{
     return (
         <div>
-            <SearchIpl/>
+            <RecipeUseState/>
+            <UseStateSquare/>
         </div>
         
     );
