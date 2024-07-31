@@ -24,11 +24,13 @@ import UseStateEx1 from './Hooks/useState/UseStateEx1';
 import UseStateEx2 from './Hooks/useState/UseStateEx2';
 import RecipeUseState from './Hooks/useState/RecipeUseState';
 import UseStateSquare from './Hooks/useState/AddSquareUseState';
+import RecipeUSeEff from './Hooks/UseEffect/RecipeUseEff';
+import UseEffCase2 from './Hooks/UseEffect/UseEffectCase2';
 const App=()=>{
     return (
         <div>
-            <RecipeUseState/>
-            <UseStateSquare/>
+            {/* <RecipeUSeEff/> */}
+            <UseEffCase2/>
         </div>
         
     );
