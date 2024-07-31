@@ -26,11 +26,13 @@ import RecipeUseState from './Hooks/useState/RecipeUseState';
 import UseStateSquare from './Hooks/useState/AddSquareUseState';
 import RecipeUSeEff from './Hooks/UseEffect/RecipeUseEff';
 import UseEffCase2 from './Hooks/UseEffect/UseEffectCase2';
+import UncontrolledForm from './Forms/Uncontrolled/UncontrolledForm';
+import ControlledForm from './Forms/Controlled/ControlledForm';
+import SamsungPolicy from './Forms/Uncontrolled/SamsungPolicy';
 const App=()=>{
     return (
         <div>
-            {/* <RecipeUSeEff/> */}
-            <UseEffCase2/>
+            <SamsungPolicy/>
         </div>
         
     );
