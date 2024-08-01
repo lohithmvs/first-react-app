@@ -1,0 +1,15 @@
+{
+  "Registration": [
+    {
+      "id": "b948",
+      "email": "lohti@gmail.com",
+      "pass": "7702123@Lohith",
+      "addr": "12/123,hebbal,bangalore",
+      "city": "dharmavaram",
+      "state": "Andhra Pradesh",
+      "zip": "124454",
+      "Gender": "Male",
+      "check": "Checked"
+    }
+  ]
+}

@@ -29,10 +29,12 @@ import UseEffCase2 from './Hooks/UseEffect/UseEffectCase2';
 import UncontrolledForm from './Forms/Uncontrolled/UncontrolledForm';
 import ControlledForm from './Forms/Controlled/ControlledForm';
 import SamsungPolicy from './Forms/Uncontrolled/SamsungPolicy';
+import ControlRegistration from './Forms/Controlled/ControlRegistration';
 const App=()=>{
     return (
         <div>
-            <SamsungPolicy/>
+            <ControlledForm/>
+            {/* <ControlRegistration/> */}
         </div>
         
     );
