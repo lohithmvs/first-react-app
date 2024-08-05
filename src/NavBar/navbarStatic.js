@@ -43,6 +43,16 @@ const NavbarStatic = () => {
                   Blog
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink to={"/recipe"} style={linkStyle}>
+                  Recipe
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to={"/joke"} style={linkStyle}>
+                  Joke
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

@@ -36,7 +36,8 @@ import NavigationEx1 from './Navigation/navigationEx1';
 const App=()=>{
     return (
         <div>
-            <NavigationEx1/>
+            <DropdownRecipe/>
+            <NavigationStack/>
         </div>
         
     );

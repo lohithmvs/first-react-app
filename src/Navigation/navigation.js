@@ -1,3 +1,7 @@
+import RandomJoke from "../Screens/RandomJoke"
+import RecipeDetail from "../Screens/Recipe-detail-screen"
+
+
 const { BrowserRouter, Routes, Route } = require("react-router-dom")
 const { default: HomeScreen } = require("../Screens/home-screen")
 const { default: About } = require("../Screens/about-screen")
@@ -16,10 +20,12 @@ const NavigationStack=()=>{
                 <Route path="setting" element={<Setting/>}/>
                 <Route path="blog" element={<Blog/>}/>
                 <Route path="*" element={<InvalidScreen/>}/>
-                <Route path="user" element={<UserScreen/>}/>
+                <Route path="recipe" element={<UserScreen/>}/>
                 <Route path="user/admin" element={<AdminScreen/>}/>
+                <Route path="joke" element={<RandomJoke/>}/>
                 {/* dynamic routes*/}
                 <Route path="user/:userId" element={<UserScreen/>}/>
+                <Route path="recipes/:RecipeId" element={<RecipeDetail/>}/>
             </Routes>
         </BrowserRouter>
     )
