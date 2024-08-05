@@ -5,13 +5,18 @@ import NavbarStatic from "../NavBar/navbarStatic";
 
 const UserScreen = () => {
   const [recipeList, setRecipeList] = useState([]);
+  const [searching,UpdateSearching]=useState("");
   useEffect(() => {
     fetchRecipes();
-  }, []);
+  }, [searching]);
 
+  const Search1=(event)=>{
+    const Sos=event.target.value;
+    UpdateSearching(Sos);
+  }
   const fetchRecipes = async () => {
     try {
-      const { status, data } = await axios.get("https://dummyjson.com/recipes");
+      const { status, data } = await axios.get(`https://dummyjson.com/recipes/search?q=${searching}`);
       if (status === 200) {
         setRecipeList(data.recipes);
         console.log(data);
@@ -23,6 +28,7 @@ const UserScreen = () => {
       <NavbarStatic />
       <h3>Welcome to recipe Screen </h3>
       <h3>Recipe listing</h3>
+      <input type="text" onChange={Search1}/>
       {recipeList.map((eachRecipe) => {
         const { name, image, rating, id, cuisine } = eachRecipe;
         return (

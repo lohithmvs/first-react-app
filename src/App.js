@@ -33,14 +33,27 @@ import ControlRegistration from './Forms/Controlled/ControlRegistration';
 import DropdownRecipe from './refresh';
 import NavigationStack from './Navigation/navigation';
 import NavigationEx1 from './Navigation/navigationEx1';
+import { createContext, useState } from 'react';
+import NavbarEx1 from './NavBar/navbarEx1';
+export const DataContext=createContext();
 const App=()=>{
-    return (
-        <div>
-            <DropdownRecipe/>
-            <NavigationStack/>
-        </div>
-        
-    );
+    const [username,UpdatedUser]=useState("Vend");
+    const [darkG,LightG]=useState(true);
+
+    const changeUsername=(newName)=>{
+        UpdatedUser(newName);
+    }
+
+    return(
+        <DataContext.Provider
+            value={{
+                username,
+                darkG,
+                changeUsername
+            }}>
+            <NavigationEx1/>
+        </DataContext.Provider>
+    )
     
 };
 export default App;

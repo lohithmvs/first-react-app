@@ -26,7 +26,10 @@ const NavbarEx1 = () => {
               <NavLink to={"/"} style={linkStyle}>Main</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={"/Recipes"} style={linkStyle}>Recipe</NavLink>
+              <NavLink to={"/home"} style={linkStyle}>Home</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to={"/setting"} style={linkStyle}>Setting</NavLink>
             </li>
             <li className="nav-item">
               <NavLink to={"/login"} style={linkStyle}>Login</NavLink>
