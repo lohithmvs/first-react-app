@@ -30,11 +30,13 @@ import UncontrolledForm from './Forms/Uncontrolled/UncontrolledForm';
 import ControlledForm from './Forms/Controlled/ControlledForm';
 import SamsungPolicy from './Forms/Uncontrolled/SamsungPolicy';
 import ControlRegistration from './Forms/Controlled/ControlRegistration';
+import DropdownRecipe from './refresh';
+import NavigationStack from './Navigation/navigation';
+import NavigationEx1 from './Navigation/navigationEx1';
 const App=()=>{
     return (
         <div>
-            <ControlledForm/>
-            {/* <ControlRegistration/> */}
+            <NavigationEx1/>
         </div>
         
     );
