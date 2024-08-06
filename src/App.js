@@ -37,11 +37,12 @@ import { createContext, useState } from 'react';
 import NavbarEx1 from './NavBar/navbarEx1';
 import Dictionary from './Apis/Dictonary';
 import DogFacts from './Apis/DogFacts';
+import UseReducerEx1 from './UseReducer/useReducer1';
+import TodoUseReduce from './UseReducer/todoUseReduce';
 const App=()=>{
     return(
         <div>
-            <Dictionary/>
-            <DogFacts/>
+            <TodoUseReduce/>
         </div>
     )
     
