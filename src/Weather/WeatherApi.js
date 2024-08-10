@@ -26,6 +26,7 @@ const WeatherApi = () => {
     event.preventDefault();
     const data3 = CityData.current.value;
     SetCityName(data3);
+    CityData.current.value="";
   };
 
   useEffect(() => {
