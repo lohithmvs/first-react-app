@@ -4,7 +4,6 @@ import { IplData } from '../ipldata/IplData';
 let sorted1=IplData.sort((a,b)=>{
   return b.Trophies-a.Trophies;
 });
-console.log(sorted1);
 function DarkVariantExample() {
   return (
     <Carousel data-bs-theme="dark">

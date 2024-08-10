@@ -6,7 +6,6 @@ const TodoUseReduce=()=>{
 
     const [currentState,dispatchFunction]=useReducer(ReducerUse,initialTodo);
     const [data2,UpdatedData2]=useState("");
-    const [userName,setUsername]=useState("");
 
     const TodoData=(event)=>{
         const a=event.target.value;

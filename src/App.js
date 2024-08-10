@@ -39,10 +39,14 @@ import Dictionary from './Apis/Dictonary';
 import DogFacts from './Apis/DogFacts';
 import UseReducerEx1 from './UseReducer/useReducer1';
 import TodoUseReduce from './UseReducer/todoUseReduce';
+import RecipeDetail from './RecipeMaker/recipe-detail';
+import RecipeNavigation from './RecipeMaker/RecipeNavigation';
+import WeatherApi from './Weather/WeatherApi';
 const App=()=>{
     return(
         <div>
-            <TodoUseReduce/>
+            <RecipeNavigation/>
+            <WeatherApi/>
         </div>
     )
     

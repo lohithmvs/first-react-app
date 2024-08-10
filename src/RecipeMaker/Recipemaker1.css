@@ -1,0 +1,9 @@
+.hello1{
+    display: grid;
+    grid-template-rows: 450px 450px 450px 450px 450px 450px 450px 450px 450px;
+    grid-template-columns: 400px 400px 400px;
+    gap: 30px;
+    margin-left: 90px;
+    margin-top:20px;
+}
+
