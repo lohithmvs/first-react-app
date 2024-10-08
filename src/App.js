@@ -33,7 +33,7 @@ import ControlRegistration from './Forms/Controlled/ControlRegistration';
 import DropdownRecipe from './refresh';
 import NavigationStack from './Navigation/navigation';
 import NavigationEx1 from './Navigation/navigationEx1';
-import { createContext, useState } from 'react';
+import React, { useState } from 'react';
 import NavbarEx1 from './NavBar/navbarEx1';
 import Dictionary from './Apis/Dictonary';
 import DogFacts from './Apis/DogFacts';
@@ -42,13 +42,54 @@ import TodoUseReduce from './UseReducer/todoUseReduce';
 import RecipeDetail from './RecipeMaker/recipe-detail';
 import RecipeNavigation from './RecipeMaker/RecipeNavigation';
 import WeatherApi from './Weather/WeatherApi';
+import AddCart from './FakeStoreCart/AddCart';
+import Refresh from './refresh';
+import Dashboard from './FrontEnd/Dashboard';
+import { initialState } from './UseReducer/helper';
 const App=()=>{
-    return(
-        <div>
-            <RecipeNavigation/>
-            <WeatherApi/>
-        </div>
-    )
+    const initialData = {
+        categories: [
+          {
+            id: 1,
+            name: 'CSPM Executive Dashboard',
+            widgets: [
+              { id: 1, name: 'Widget 1', text: 'Random text for Widget 1' },
+              { id: 2, name: 'Widget 2', text: 'Random text for Widget 2' }
+            ]
+          },
+          {
+            id: 2,
+            name: 'Security Overview',
+            widgets: [
+              { id: 3, name: 'Widget 3', text: 'Random text for Widget 3' }
+            ]
+          }
+        ]
+      };
+      
+    const [data, setData] = useState(initialData);
+
+  const addWidget = (categoryId, widget) => {
+    const newData = { ...data };
+    const category = newData.categories.find(cat => cat.id === categoryId);
+    category.widgets.push(widget);
+    setData(newData);
+  };
+
+  const removeWidget = (categoryId, widgetId) => {
+    const newData = { ...data };
+    const category = newData.categories.find(cat => cat.id === categoryId);
+    category.widgets = category.widgets.filter(widget => widget.id !== widgetId);
+    setData(newData);
+  };
+
+  return (
+    <div className="App">
+      <h1>Dynamic Dashboard</h1>
+      <Dashboard data={data} addWidget={addWidget} removeWidget={removeWidget} />
+    </div>
+  );
+
     
 };
 export default App;
